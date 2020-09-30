@@ -1,6 +1,6 @@
 
 output "vpc_id" {
-  value = module.vpc.vpc_id.value
+  value = concat(module.vpc.vpc_id.value, [""])[0]
 }
 
 output "azs" {
@@ -8,9 +8,9 @@ output "azs" {
 }
 
 output "private_subnets" {
-  value = module.vpc.private_subnets.value
+  value = module.vpc.private_subnets
 }
 
 output "public_subnet_ids" {
-  value = module.vpc.public_subnets.value
+  value = module.vpc.public_subnets
 }
