@@ -1,6 +1,6 @@
 
 output "vpc_id" {
-  value = concat(module.vpc.vpc_id.value, [""])[0]
+  value = concat(module.vpc.vpc_id.value)
 }
 
 output "azs" {
