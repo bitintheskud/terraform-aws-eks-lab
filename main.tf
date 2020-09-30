@@ -1,3 +1,7 @@
+provider "aws" {
+  region = var.aws_region
+}
+
 module "vpc" {
   source = "github.com/terraform-aws-modules/terraform-aws-vpc?ref=v2.47.0"
 
